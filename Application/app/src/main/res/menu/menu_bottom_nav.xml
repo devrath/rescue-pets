@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
   <item
       android:id="@+id/animalsNearYou"
-      android:icon="@drawable/ic_animals_near_you_24dp"
+      android:icon="@drawable/ic_animals"
       android:title="@string/animals_near_you"
       app:showAsAction="ifRoom" />
   <item
       android:id="@+id/search"
-      android:icon="@drawable/ic_search_24dp"
+      android:icon="@drawable/ic_search"
       android:title="@string/search"
       app:showAsAction="ifRoom" />
 </menu>
