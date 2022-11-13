@@ -10,4 +10,12 @@ class AnimalsFragmentViewModel @Inject constructor(
     private val compositeDisposable: CompositeDisposable
 ): ViewModel() {
 
+
+
+
+    override fun onCleared() {
+        super.onCleared()
+        compositeDisposable.clear()
+    }
+
 }

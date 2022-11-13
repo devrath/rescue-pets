@@ -13,22 +13,29 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
+    // Binding reference
     private lateinit var binding: ActivityMainBinding
 
+    // <-------------------------- NAVIGATION ---------------------------------------------->
+    // Bottom navigation controller
     private val navController by lazy { findNavController(R.id.nav_host_fragment) }
+    // Configuration(Tabs) for the navigation controller
     private val appBarConfiguration by lazy {
         AppBarConfiguration(topLevelDestinationIds = setOf(R.id.animalsNearYou, R.id.search))
     }
+    // <-------------------------- NAVIGATION ---------------------------------------------->
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Switch to AppTheme for displaying the activity
+        // Activity theme
         setTheme(R.style.AppTheme)
-
         super.onCreate(savedInstanceState)
+        // Get the binding reference
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        // Set action bar
         setupActionBar()
+        // Set bottom navigation bar
         setupBottomNav()
     }
 
